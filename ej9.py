@@ -1,0 +1,18 @@
+print("=== REGISTRO DE VIAJE ===\n")
+chofer = input("Nombre del chofer: ")
+origen = input("Ciudad de origen: ")
+destino = input("Ciudad de destino: ")
+kilometros = float(input("kilometros recorridos: "))
+precio_litro = float(input ("Precio del combustible por litro ($): "))
+consumo_100km = float(input("Consumo del camión (litros cada 100km): "))
+litros_consumidos = kilometros * (consumo_100km / 100)
+costo_combustible = litros_consumidos * precio_litro
+viaje_largo = kilometros >= 300
+print("\n=== REPORTE FINAL ===")
+print(f"Chofer: {chofer}")
+print(f"Ruta: {origen} -> {destino}")
+print(f"Kilómetros: {kilometros:.2f} km")
+print(f"Litros consumidos: {litros_consumidos:.2f} L")
+print(f"Coste de combustible: {costo_combustible:.2f} $")
+print(f"¿Vaije largo (>= 300km)?: {viaje_largo}")
+print("=====================") 
